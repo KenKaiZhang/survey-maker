@@ -40,7 +40,7 @@ export const SideBar = (props: SideBarProps) => {
   return (
     <DragDropContext onDragEnd={handleDragDrop}>
       <div
-        className="absolute p-4 z-20 h-full w-1/3 bg-white/25 backdrop-blur-sm rounded-r-[10px] duration-[0.75s] "
+        className="absolute p-4 z-50 h-full w-1/3 bg-white/25 backdrop-blur-sm rounded-r-[10px] duration-[0.75s] "
         style={{ left: open ? 0 : "-35%" }}
       >
         <Droppable droppableId="drop-root">

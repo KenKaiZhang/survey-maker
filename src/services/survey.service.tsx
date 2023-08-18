@@ -16,3 +16,20 @@ export const updateSurvey = async (survey: Survey, body: any) => {
     throw new ClientError("Failed to update survey");
   }
 };
+
+export const getSurvey = async (code: string) => {
+  const url = `/survey/code/${code}`;
+  const res = await ApiClient.get(url);
+  if (res.status !== HttpStatusCode.Ok) {
+    throw new ClientError("Failed to retrieve surveys");
+  }
+  return res.data;
+};
+
+export const getSurveys = async (pipeline: any) => {
+  const res = await ApiClient.post("/survey/filter", pipeline);
+  if (res.status !== HttpStatusCode.Ok) {
+    throw new ClientError("Issue retrieving surveys");
+  }
+  return res.data;
+};

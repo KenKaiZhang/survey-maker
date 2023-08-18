@@ -9,6 +9,7 @@ type User = {
 };
 
 type Survey = {
+  _id: string;
   code: number;
   owner: any;
   cover?: string;

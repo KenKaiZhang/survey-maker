@@ -9,5 +9,5 @@ export interface ImageProps {
 export const Image = (props: ImageProps) => {
   const { src, alt, fitting = "cover" } = props;
 
-  return src && <img className=" h-full w-full rounded-[10px]" src={src} alt={alt} style={{ objectFit: fitting }} />;
+  return src && <img className="h-full w-full rounded-[10px]" src={src} alt={alt} style={{ objectFit: fitting }} />;
 };
